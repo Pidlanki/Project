@@ -1,0 +1,268 @@
+/* Markup start */
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+#page {
+    display: grid;
+    grid-template-columns: minmax(150px, 0.2fr) 1.8fr;
+    
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header"
+        "side main"
+        ". footer";
+    background-color: #f6f6f6;
+    
+}
+
+header {
+    display: grid;
+    grid-template-columns: minmax(150px, 0.2fr) 1.8fr;
+    /* grid-template-rows: 1fr 1fr; */
+    gap: 0px 0px;
+    grid-template-areas:
+        "logo title"
+        "logo title";
+    grid-area: header;
+
+}
+
+.logo {
+    grid-area: logo;
+    padding: 1em;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-border-image: 
+      -webkit-gradient(linear, 0 100%, 0 0, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+    -webkit-border-image: 
+      -webkit-linear-gradient(bottom,#9ed8fc, rgba(0, 0, 0, 0)) 1 100%;
+    -moz-border-image:
+      -moz-linear-gradient(bottom, #9ed8fc, rgba(0, 0, 0, 0)) 1 100%;  
+    -o-border-image:
+      -o-linear-gradient(bottom, #9ed8fc, rgba(0, 0, 0, 0)) 1 100%;
+    border-image:
+      linear-gradient(to top, #9ed8fc, rgba(0, 0, 0, 0)) 1 100%;
+
+}
+
+.title {
+    grid-area: title;
+    background-color: white;
+    padding: 3em 1em 1em 1em;
+}
+
+aside {
+    grid-area: side;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.7fr 0.3fr;
+    /* grid-template-rows: 1fr 1fr; */
+    gap: 0px 0px;
+    grid-template-areas:
+        "resume summary"
+        "resume summary";
+    grid-area: main;
+    background-color: white;
+}
+
+.summary {
+    grid-area: summary;
+    justify-self: end;
+    padding: 1em;
+}
+
+.resume {
+    grid-area: resume;
+    padding: 1em;
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-areas:
+        "col1 col2";
+    border-top: 1px solid #9ed8fc;
+}
+
+.col1 {
+    grid-area: col1;
+    padding: 1em;
+}
+
+.col2 {
+    grid-area: col2;
+    padding: 1em;
+}
+.project{
+    display: grid;
+    grid-template-areas: "title git"
+                         "pic about" ;  
+    grid-template-columns: minmax(100px, 500px) minmax(120px, 3fr);
+}
+
+.title-project{
+    grid-area: title;
+    justify-self: center;
+}
+.picture{
+    grid-area: pic;
+}
+.about{
+    grid-area: about;
+}
+/* Markup end */
+
+
+
+
+
+
+
+
+
+/* Header start */
+#page header .logo img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 10em;
+    height: 160px;
+    text-decoration: none;
+}
+
+/* header end */
+
+
+
+
+/* Main start */
+.picture, .about{
+    padding: 1em;
+}
+.about p, .about ul li{
+    padding: 0.5em;
+
+}
+.picture img{
+    max-width: 470px;
+    border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+.picture img:hover{
+    box-shadow: 0 0 2px 1px rgba(153, 153, 153, 0.5);
+}
+.about{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(112, 112, 112);
+}
+.category{
+    margin-left: 1rem;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    margin-bottom: 1em;
+}
+.about span{
+    text-decoration: underline;
+}
+.project h3 a{
+    color: black;
+}
+
+
+/* table start */
+table {
+    background-color: #f9f9f9;
+    border: 1px solid black;
+}
+
+code {
+    color: #000;
+    background-color: #f8f9fa;
+    border: 1px solid #eaecf0;
+    border-radius: 2px;
+    padding: 1px 4px;
+}
+
+/* table end */
+/* Main end */
+
+
+
+
+/* aside :start */
+aside {
+    border-right: 1px solid #9ed8fc;
+}
+
+aside nav h3 {
+    background-image: linear-gradient(to right, rgba(200, 204, 209, 0) 0, #c8ccd1 33%, #c8ccd1 66%, rgba(200, 204, 209, 0) 100%);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    color: #54595d;
+    margin: 0.5em 0 0 0.66666667em;
+    border: 0;
+    padding: 0.25em 0;
+    font-size: 0.75em;
+    font-weight: normal;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    color: #0645ad;
+    background: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    padding: 0.25em 0;
+    font-size: 0.75em;
+    line-height: 1.125em;
+    word-wrap: break-word;
+}
+
+/* aside end */
+
+
+
+
+/* Footer start */
+menu {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+}
+
+.copyrightsicon {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 88px 88px;
+}
+
+#page footer .col2 ul {
+    justify-content: end;
+}
+
+#page footer .col1 p,
+#page footer .col1 menu li {
+    line-height: 2em;
+    font-size: 88%;
+}
+
+menu li {
+    list-style: none;
+}
+
+/* Footer end */
